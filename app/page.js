@@ -119,9 +119,6 @@ export default function Home() {
                     {item.name}
                   </a>
                 ))}
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
-                  Sign In
-                </button>
               </div>
             </div>
 
