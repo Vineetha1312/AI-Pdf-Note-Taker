@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { Layout, Shield } from 'lucide-react'
+import { FileText, Layout, Shield } from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
 import UploadPdfDialog from './UploadPdfDialog'
 import { useUser } from '@clerk/nextjs'
@@ -18,16 +18,18 @@ function SideBar() {
     userEmail:user?.primaryEmailAddress?.emailAddress
   })
 
-  console.log(GetUserInfo);
   
     const fileList=useQuery(api.fileStorage.GetUserFiles, {
       userEmail:user?.primaryEmailAddress?.emailAddress
     });
   
-    console.log(fileList);
   return (
     <div className="shadow-md h-screen p-7">
-      <Image  src={"/V-Profile-logo.svg"} alt="logo" width={40} height={40}/> 
+      {/* <Image  src={"/V-Profile-logo.svg"} alt="logo" width={40} height={40}/>  */}
+      <div className="flex items-center space-x-2">
+                      <FileText className="h-8 w-8 text-blue-400" />
+                      <span className="text-xl font-bold">PDF Note AI</span>
+                    </div>
      
      <div className="mt-10">
         
